@@ -1,0 +1,30 @@
+.container{
+    margin: 0 auto;
+    padding: 0;
+    width: 95%;
+}
+p{
+    display: inline-block;
+    text-align: left;
+}
+.goldCount{
+    display: inline-block;
+    border: 1px solid black;
+    width: 200px;
+    height: 18px;
+    text-align: left;
+}
+article{
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+footer{
+    overflow-y: scroll;
+    width: 85%;
+    height: 200px;
+    border: 1px solid black;
+}
