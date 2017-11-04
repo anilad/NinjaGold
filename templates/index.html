@@ -48,9 +48,7 @@
                 <input type="submit" value="Find Gold!" />
             </form>
         </article>
-        <footer>
-            <p>{{session['activities']}}</p>
-        </footer>
+        <textarea disabled>{{session['activities']}}</textarea>
         <form action="/reset">
             <button type='submit'>Reset</button>
         </form>

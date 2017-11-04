@@ -22,7 +22,7 @@ article{
     padding: 5px;
     border: 1px solid black;
 }
-footer{
+textarea{
     overflow-y: scroll;
     width: 85%;
     height: 200px;

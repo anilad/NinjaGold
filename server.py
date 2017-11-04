@@ -18,31 +18,31 @@ def submit():
     rgb = "green"
     if request.form['building'] == 'farm':
         gold = random.randrange(10,21)
-        session['activities'] += "Earned " + str(gold) + " golds from the "+ request.form['building'] + "! ("+timestamp+") \r"
+        session['activities'] += "Earned " + str(gold) + " golds from the "+ request.form['building'] + "! ("+timestamp+") \n"
         session['gold'] += gold
         return redirect('/')
 
     if request.form['building'] == 'cave':
         gold = random.randrange(5,11)
         session['gold'] += gold
-        session['activities'] += "Earned " + str(gold) + " golds from the "+ request.form['building'] + "! ("+timestamp+") \r"
+        session['activities'] += "Earned " + str(gold) + " golds from the "+ request.form['building'] + "! ("+timestamp+") \n"
         return redirect('/')
 
     if request.form['building'] == 'house':
         gold = random.randrange(2,6)
         session['gold'] += gold
-        session['activities'] += "Earned " + str(gold) + " golds from the "+ request.form['building'] + "! ("+timestamp+") \r"
+        session['activities'] += "Earned " + str(gold) + " golds from the "+ request.form['building'] + "! ("+timestamp+") \n"
         return redirect('/')
 
     if request.form['building'] == 'casino':
         gold = random.randint(-50,51)
         session['gold'] += gold
         if gold>=0:
-            session['activities'] += "Entered a casino and won " +str(gold)+ " golds! (" +timestamp+")\r"
+            session['activities'] += "Entered a casino and won " +str(gold)+ " golds! (" +timestamp+")\n"
 
         else:
             rgb = "red"
-            session['activities'] += "Entered a casino and lost " +str(gold)+ " golds... Ouch.. (" +timestamp+")\r"
+            session['activities'] += "Entered a casino and lost " +str(gold)+ " golds... Ouch.. (" +timestamp+")\n"
         return redirect ('/')
 
 @app.route('/reset')
